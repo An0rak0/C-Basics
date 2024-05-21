@@ -33,4 +33,23 @@ Example:
 ptr = (float*) calloc(25, sizeof(float))
 ```
 
-The code above allocates contiguous memory to 25 elements the size of the float. If space is insufficient, it again returns a NULL pointer.
+The code above allocates contiguous memory to 25 elements the size of the float. If space is insufficient, it again returns a NULL pointer. Calloc is slower, but does initialize the memory to 0.
+
+### Realloc
+The syntax for realloc (re-allocation) is:
+
+```
+ptr = realloc(ptr, newSize)
+```
+
+Above, ptr is reallocated with a new amount of memory, newSize. Realloc must be used in conjuction with, or after, malloc/calloc.
+
+Example:
+
+```
+// allocates 20 bytes of memory to ptr
+int* ptr = (int*)malloc(5* sizeof(int))
+
+// re-allocates the size of ptr to 10 times the size of int (40 bytes) rather than 5 times (20 bytes)
+ptr = realloc(ptr, 10* sizeof(int))
+```
