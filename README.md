@@ -1,2 +1,3 @@
 # C-Basics
-A repository to explain the fundamentals of C
+# Memory allocation/recalling
+# malloc
