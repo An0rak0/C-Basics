@@ -1,4 +1,5 @@
 # C-allocation
+In C, we can allocate memory dynamically. We do this by creating pointers that hold the address of a block of memory. These pointers don't do anything else, they just point.
 
 ## Memory allocation/recalling
 Methods of allocation/reallocation and memory recalling are: malloc, calloc, free and realloc.
