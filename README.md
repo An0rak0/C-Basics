@@ -47,9 +47,28 @@ Above, ptr is reallocated with a new amount of memory, newSize. Realloc must be 
 Example:
 
 ```
-// allocates 20 bytes of memory to ptr
 int* ptr = (int*)malloc(5* sizeof(int))
 
-// re-allocates the size of ptr to 10 times the size of int (40 bytes) rather than 5 times (20 bytes)
 ptr = realloc(ptr, 10* sizeof(int))
 ```
+
+The code snippet above performs 2 actions: it dynamically allocates a chunk of memory worth 5 times the size of int (4 bytes). It then re-allocates this memory (worth 20 bytes) to 10 times the size of int. The re-allocated size is 40 bytes.
+
+### Free
+The syntax for free is:
+
+```
+free(ptr)
+```
+
+Like realloc, this must be used in conjuction with, or after, malloc/calloc.
+
+Example:
+
+```
+int* ptr = (int*)malloc(5* sizeof(int))
+
+free(ptr)
+```
+
+The code example for free, is similar to realloc, where it first allocates the memory, but instead of changing the size of ptr, it removes the memory entirely, 'freeing it'.
