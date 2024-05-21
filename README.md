@@ -18,7 +18,7 @@ ptr = (int*) malloc(100 * sizeof(int))
 
 This code is saying that it will allocate 100 x the size int, which is 4 bytes. This means it allocates 400 bytes. If size is insufficient, it returns a NULL pointer. Malloc is useful when a user is inputing information that isn't of a specified value, and therefore always needs different amounts of memory.
 
-### calloc
+### Calloc
 The syntax for calloc (contiguous allocation) is:
 
 ```
@@ -33,4 +33,4 @@ Example:
 ptr = (float*) calloc(25, sizeof(float))
 ```
 
-The code above allocates contiguous memory to 25 elements the size of the float.
+The code above allocates contiguous memory to 25 elements the size of the float. If space is insufficient, it again returns a NULL pointer.
